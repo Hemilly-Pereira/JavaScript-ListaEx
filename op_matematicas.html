@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício dois - Operações Matemáticas e  Comparativos</title>
+</head>
+<body>
+    <h3>informe sua idade:</h3>
+    <input id="idade">
+    <button  type="button" onclick="compararIdade()">Enviar</button>
+
+    <script>
+        /*Comparação*/
+        let idade = null;
+
+        function  compararIdade(){
+            idade = Number(document.getElementById("idade").value);
+            if(idade>=18){
+                alert("Maior de Idade");
+            }else{
+                alert("Menor de  Idade");
+            }
+        }
+
+        /*&&*/
+      
+        let idade2  = 10;
+        let maiorDeIdade = idade2>=18 && idade2<=60;
+        console.log(maiorDeIdade);
+        
+        /*Soma*/
+        console.log("**************************************************")
+        let num1 = 3;
+        let num2 = 5;
+
+        let resultado = num1+num2
+        console.log(`O valor da soma é:  ${resultado}`);
+
+      
+    </script>
+    
+</body>
+</html>

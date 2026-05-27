@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de  Fluxo, Capitulo 3</title>
+</head>
+<body>
+    <h3>informe sua idade:</h3>
+    <input id="idade">
+    <button  type="button" onclick="compararIdade()">Enviar</button>
+    <br>
+    
+
+    <script>
+        /*Comparação*/
+        let idade = null;
+
+        function  compararIdade(){
+            idade = Number(document.getElementById("idade").value);
+            if(idade>=16){
+                alert("Pode votar");
+            }else{
+                alert("Não pode votar");
+            }
+        }
+
+        let diaSemana = "Segunda";
+
+        switch(diaSemana){
+            case "Domingo":  console.log("Amanhã já é segunda");  break;
+            case "Segunda":console.log("É segunda denovo");  break;
+            case "Terça":console.log("Boa Terça-feira");  break;
+            case "Quarta":console.log("Metade da Semana já foi!");  break;
+            case "Quinta":console.log("Amanhã é sexta");  break;
+            case "Sexta":console.log("É sexta-feira!");  break;
+            case "Sabado":console.log("Final de Semana chegou!");  break;
+        }
+     </script>
+</body>
+</html>
