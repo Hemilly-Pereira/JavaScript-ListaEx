@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12 - Closures e Funções Aninhadas
+    </title>
+</head>
+<body>
+    <script>
+        function saudacao(){
+            let nome = prompt('Diigite seu nome:');
+
+            function saudar(){
+                alert(`olá ${nome}!`);
+            }
+            saudar();
+        }
+
+        saudacao()
+
+        function multiplicador(x){
+            let num = Number(prompt("Digite um numero a ser multiplicado:"));
+             function multiplicar(){
+                let produto=x*num;
+                return produto;
+             }
+             return multiplicar()
+        }
+
+       console.log(multiplicador(2));
+       console.log(multiplicador(9));
+       console.log(multiplicador(6));
+    </script>
+
+    <!--
+        3- Porque as Closures são úteis?
+        r: Closure é a capacidade de uma função interna acessar variáveis do escopo da função externa mesmo após ela ter retornado. É útil porque permite criar estado privado e persistente sem variáveis globais, e gerar funções pré-configuradas com valores já "embutidos".
+
+        4- Qual será o resultado do código abaixo?
+        R: 1 - Primeira instancia
+        2 - Valor acumulador da primeira instancia
+        1 - Segunda NOVA instancia
+    -->
+</body>
+</html>
