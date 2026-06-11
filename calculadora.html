@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        body > div {
+            background-color: #222;
+            padding: 16px;
+            border-radius: 8px;
+            width: 240px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        #resultado {
+            background-color: #333;
+            color: white;
+            text-align: right;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 4px;
+            min-height: 45px;
+        }
+
+        #primeirafila,
+        #segundaFila,
+        #terceiraFila,
+        #quartafila,
+        #operacoes {
+            display: grid;
+            gap: 8px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        #quartafila {
+            grid-template-columns: 1fr;
+        }
+
+        #operacoes {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        button {
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="resultado"></div>
+        <div id="primeirafila">
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+        </div>
+        <div id="segundaFila">
+            <button value="4">4</button>
+            <button value="5">5</button>
+            <button value="6">6</button>
+        </div>
+        <div id="terceiraFila">
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button>
+        </div>
+        <div id="quartafila">
+            <button value="0">0</button>
+        </div>
+        <div id="operacoes">
+            <button value="plus" onclick="soma()">+</button>
+            <button value="minus" onclick="subtrair()">-</button>
+            <button value="divide" onclick="dividir()">/</button>
+            <button value="mult" onclick="multiplicar()">x</button>
+            <button value="clear" onclick="clear()">C</button>
+        </div>
+    </div>
+</body>
+</html>

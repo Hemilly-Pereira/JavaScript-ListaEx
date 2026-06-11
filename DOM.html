@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade   8  - Manipulação  do DOM</title>
+</head>
+<body>
+    <h1>Este é um texto em H1</h1>
+    <p>Isso é um paragrafo. Isso é um paragrafo. Isso é um paragrafo</p>
+    <button>Este é um Botão</button>
+    <script>
+        let novoTexto  = document.querySelector('h1');
+        novoTexto.innerHTML = "O texto  foi  alterado no corpo do JavaScript";
+        
+       // document.querySelector('h1').textContent = "teste";
+
+        let p = document.querySelector('p');
+        p.style.background = "#d7f5df";
+
+        let button = document.querySelector('button');
+        button.className = "botao1";
+
+        button.style.background = "#e8d7f5";
+        button.style.width = '100px';
+        button.style.height = '50px';
+        button.style.border = "1px solid #bd82ed";
+        button.style.borderRadius = "8px"
+
+        console.log(button.className)
+
+    </script>
+</body>
+</html>

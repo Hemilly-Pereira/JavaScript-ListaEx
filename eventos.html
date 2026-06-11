@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9 - AddEventListener</title>
+</head>
+<body>
+    <p>Este é um texto</p>
+    <button  id="botao">Troque o Paragrafo</button>
+    
+    <br/>
+    <br/>  
+    <input type="text" placeholder="Digite algo" />
+    <br/>
+    <div id="retorno"></div>
+
+    <br/>
+    <img src="carro.jpg" style="border: 2px solid red"/>
+    <script>
+        document.getElementById('botao').addEventListener("click", function(){
+            document.querySelector('p').textContent = "Este é outro paragrafo possivél";
+        })
+        
+        document.querySelector('input').addEventListener('keydown',function(event){
+            if(event.key == 'Enter'){
+                let valor = document.querySelector('input').value;
+                console.log(valor)
+                
+                document.getElementById('retorno').textContent = valor;
+
+            }
+            
+        })
+
+        document.querySelector('img').addEventListener('mouseover',function(){
+            document.querySelector('img').style.border = "3px solid black";
+        })
+
+        document.querySelector('img').addEventListener('mouseleave', function() {
+             document.querySelector('img').style.border = "2px solid red"; // volta ao estilo original
+        });
+
+    </script>
+</body>
+</html>
