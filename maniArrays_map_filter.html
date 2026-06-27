@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14</title>
+</head>
+<body>
+    <script>
+        /*Ex1*/
+        const numeros = [1, 2, 3, 4, 5];
+
+        const quadrados = numeros.map(n => n * n);
+        console.log(quadrados);
+
+        /*Ex2*/
+        const nomes = ['João', 'Fernanda', 'Carlos', 'Eva'];
+
+        const longos = nomes.filter(nome => nome.length > 5);
+        console.log(longos);
+
+        /*Ex3*/
+
+        const precos = [10.5, 22.3, 18.4];
+
+        const total = precos.reduce((acc, preco) => acc + preco, 0);
+        console.log(total);
+
+        /*Ex4*/
+        const carrinho = [
+            { nome: 'Camiseta', preco: 29.99 },
+            { nome: 'Calça',    preco: 89.90 },
+            { nome: 'Meias',    preco: 9.99  },
+        ];
+
+        const resultadoFinal = carrinho.reduce((soma, produto) => soma + produto.preco, 0);
+        console.log("Total: R$" + resultadoFinal.toFixed(2));
+
+    </script>
+</body>
+</html>

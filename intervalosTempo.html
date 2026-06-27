@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 15</title>
+</head>
+<body>
+    <script>
+        /*Ex1*/
+        console.log("aguardando 1,5 segundos...");
+
+        setTimeout(() => {
+        console.log("Olá, mundo!");
+        }, 1500);
+
+        /*Ex2*/
+        let contador = 0;
+
+        const intervalo = setInterval(() => {
+        contador++;
+        console.log(contador);
+
+        if (contador === 10) {
+            clearInterval(intervalo);
+            console.log("parou!");
+        }
+        }, 1000);
+        /*Ex3*/
+
+        let intervalo2 = null;
+
+        function iniciar() {
+        intervalo = setInterval(() => {//inicia
+            console.log("tick");
+        }, 1000);
+        }
+
+        function parar() {
+        clearInterval(intervalo2);//limpa/termina
+        console.log("parou!");
+        }
+
+        iniciar();
+        setTimeout(parar, 4000); // vai parar depois de 4s
+    </script>
+</body>
+</html>

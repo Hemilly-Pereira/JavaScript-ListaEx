@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16</title>
+</head>
+<body>
+    <script>
+        /*exercicio 1 e 2*/
+        const promessa = new Promise((resolve) => {
+            console.log("aguardando...");
+            setTimeout(() => resolve("Dados carregados!"), 3000);
+        });
+         
+        promessa.then(mensagem => console.log(mensagem));
+        /*exercicio 3*/
+
+        function criarPromessa() {
+            return new Promise((resolve) => {
+                setTimeout(() => resolve("Dados Alterados!"), 3000);
+             });
+        }
+
+        async function executar() {
+            console.log("aguardando...");
+            const mensagem = await criarPromessa();
+            console.log(mensagem);
+        }
+
+        executar();
+    </script>
+</body>
+</html>

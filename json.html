@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 17</title>
+</head>
+<body>
+    <script>
+        /*exercicio 1*/
+        const aluno = {
+            nome: "Hemilly",
+            idade: 17,
+            curso: "Desenvolvimento Sistemas"
+        };
+
+        const json = JSON.stringify(aluno, null, 2);//transforma o objeto em JSON
+        console.log(json);
+
+        /*exercicio 2*/
+        const jsonString = '{"nome":"Joãozinho","idade":20,"curso":"Desenvolvimento Web"}';
+
+        const aluno2 = JSON.parse(jsonString);
+
+        console.log("nome: "  + aluno2.nome);
+        console.log("idade: " + aluno2.idade);
+        console.log("curso: " + aluno2.curso);
+    </script>
+</body>
+</html>
